@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>hyderabadtourism.in</title>
+    {% include 'partials/_fonts.html' %}
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat;
+        }
+
+        .heading2 {
+            background-color: white;
+            height: 60px;
+        }
+
+        .heading2 ul {
+            display: flex;
+            color: black;
+            justify-content: center;
+        }
+
+        .heading2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .heading2 a:hover {
+            color: #047ab5;
+        }
+
+        .heading2 ul li {
+            justify-content: space-evenly;
+            font-size: 15px;
+            margin: 10px 30px;
+            margin: 10px 40px 5px;
+            color: black;
+            font-weight: bold;
+            line-height: 1.2rem;
+            padding-top: 10px;
+
+        }
+
+        .images img {
+            width: 100%;
+            height: 500px;
+        }
+
+        #message {
+            text-align: center;
+        }
+
+        #message img {
+            margin: 15px 0px;
+            width: 60px;
+            height: auto;
+        }
+
+        #message h2 {
+            font-size: 21.2px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        #message h3 {
+            font-weight: bold;
+            font-size: 17px;
+            margin: 10px;
+        }
+
+        #message p {
+            font-weight: bold;
+            font-size: 15.6px;
+            margin: 10px;
+            padding-bottom: 10px;
+        }
+
+        #explore-hyd,
+        #explore-telangana {
+            text-align: center;
+            color: white;
+            background-color: #89baf3;
+            padding: 15px 25px 25px 25px;
+        }
+
+        #explore-hyd div,
+        #explore-telangana div {
+            margin-top: 20px;
+        }
+
+        .explore-tabs {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .explore-tabs .tab img {
+            width: 230px;
+            height: 230px;
+        }
+
+        #explore-telangana {
+            color: black;
+            font-weight: bold;
+            background-color: #d6d6d6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #location {
+            display: flex;
+            background-color: #8ec3bc;
+            color: white;
+            font-weight: bold;
+            justify-content: space-around;
+        }
+
+        .location-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            text-align: center;
+        }
+
+        #location h2 {
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        #location h3 {
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        #location p {
+            font-size: 11px;
+        }
+
+        .mailto span {
+            font-size: 11px;
+            color: black;
+            font-weight: normal;
+            background-color: #047ab5;
+            padding: 15px 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .mailto a:hover span {
+            color: white;
+        }
+
+        #websites-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 0px 30px 0px;
+            gap: 35px;
+        }
+
+        .websites ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            gap: 100px;
+            font-size: 14px;
+        }
+
+        .info {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #pages {
+            background-color: black;
+            color: white;
+            padding: 50px;
+        }
+
+        #pages ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        #pages a {
+            color: white;
+        }
+
+        #pages a:hover {
+            color: #01389e;
+        }
+
+        #associates {
+            display: flex;
+            justify-content: center;
+        }
+
+        #associates-section p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #associates img {
+            width: 150px;
+            height: 70px;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'partials/_header.html' %}
+    <div class="heading2">
+        <ul>
+            <li><a href="{% url 'about-hyderabad' %}">About Hyderabad</a></li>
+            <li><a href="{% url 'sight-seeing' %}">Sight Seeing</a></li>
+            <li><a href="{% url 'special-attractions' %}">Special Attractions</a></li>
+            <li><a href="{% url 'hyderabad-city-tour' %}">Hyderabad City Tour</a></li>
+            <li><a href="{% url 'ramoji-film-city-tour' %}">Ramoji Film City Tour</a></li>
+        </ul>
+    </div>
+
+    <div class="images">
+        <img src=https://lh3.googleusercontent.com/E2whJ1MB3OS9ct8Mc-0I0G0dFXCxuv9DY5dE2wQ6V4bPeMva4BDcBwwjNPnYRIwM_hpz25LzOx5v7tOs_3QMIkWlRkyS3iY=s1600
+            alt="golconda">
+    </div>
+    <div id="message">
+        <img src="https://lh3.googleusercontent.com/38sn4qIzdyH_QZMmn2qstR46iJokDUyIXyEiHyphbvCtBiB9rt1AVSOluN2rfNUrVPXYTTu_nL4VPY7aBvz4UWFL1c2wSg=s120"
+            alt="whatsapp">
+        <h2>Welcome To Hyderabad</h2>
+        <h3>The Hub to Many Attractions of south India</h3>
+        <p>Explore the destinations and plan the hassle free vacations with us...</p>
+    </div>
+
+    <section id="explore-hyd">
+        <div class="upper">
+            <div class="heading">
+                <h2>Explore Hyderabad</h2>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="explore-tabs">
+                <div class="tab">
+                    <div class="background-image"><a href="{% url 'golconda' %}"><img
+                                src="https://lh3.googleusercontent.com/MHpY01i0DRE-_uM13S5FhD2I4jxdANkRCZzP_ZdUpX3DyJ-LSDzBL4xjpMU3CSQwhPqP1qHDyH7xeaYOHALnXGZUwB31X3w=s300"
+                                alt="Golconda Fort"></a></div>
+                    <div class="preview-title">
+                        <h3>Golconda Fort</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><a href="{% url 'charminar' %}"><img
+                                src="https://lh3.googleusercontent.com/31dkrnePi-6lGD6O22yWn9FPbCYzb9wDtiN9f7CKHzhZ7y2ZaIfTIwDQIuo-_ncgZwvx3yAxKpieQJXHUkqH-U7YUIXDtwQ=s300"
+                                alt="Charminar"></a></div>
+                    <div class="preview-title">
+                        <h3>Charminar</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><a href="#"><img
+                                src="https://lh3.googleusercontent.com/mCT4pYqLQCL41DhL0n1AhE-7Nzea068ZghJKtAStRjoROtMpiWNzR-cDy4HIrAkNjCML16lk_HbV-H4FCyNlNVbfFAww0_0=s300"
+                                alt="Hussain Sagar"></a></div>
+                    <div class="preview-title">
+                        <h3>Hussain Sagar</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><a href="#"><img
+                                src="https://lh3.googleusercontent.com/OpS90cqTlKv4qUq0EpDIwboyYW3ntjwbERB1p1ZIYJrmv9BvnUCGjdJgIMWSfSEG70QWC4dIVFGoFnRtdBMGhhkxpfakldc=s300"
+                                alt="Statue of Equality"></a></div>
+                    <div class="preview-title">
+                        <h3>Statue of Equality</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><a href="#"><img
+                                src="https://lh3.googleusercontent.com/ADdH7huTdLKAIG6d_ezZ6xOAOJBEX9q6nngr86hbMcbuSs2XZ_YpKDuzBQyOKnu43pcx560PM0Rh6clYbg8VpFdfLvMjDg=s300"
+                                alt="Nehru Zoo Park"></a></div>
+                    <div class="preview-title">
+                        <h3>Nehru Zoo Park</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore-telangana">
+        <div class="upper">
+            <h2>Explore Telangana</h2>
+        </div>
+        <div class="lower">
+            <div class="explore-tabs">
+                <div class="tab">
+                    <div class="background-image"><img
+                            src="https://lh3.googleusercontent.com/Bvm9RNv0gg5lYDiHwMtVtdEjF28sJgpfYo1bRdCpqT0vHbmbbsaw8WxeZSIu9Uy5hKNSswDwcdVLB0ic3Jh-ttq1g2Tn_w=s300"
+                            alt="Ramappa"></div>
+                    <div class="preview-title">
+                        <h3>Ramappa</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><img
+                            src="https://lh3.googleusercontent.com/qbqTlfaDeY_EZebWL867EQLO_UyLTjGuTYZYDmBzg6GPvzW7SrWqfBegajWBJqp04uRbuFmcwXPUUB51o7GftUpTCfmrzw=s300"
+                            alt="Warangal"></div>
+                    <div class="preview-title">
+                        <h3>Warangal</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><img
+                            src="https://lh3.googleusercontent.com/KohLDhNcTyerfhdz5pDrFFNeT0TqcZdoyXYbDSZ6a8YVBycfCieLnmXJttdzVY-iLiZAoQUg_4qCaMdOEQnmwdUKQT1Xk6Y=s300"
+                            alt="Yadadri"></div>
+                    <div class="preview-title">
+                        <h3>Yadadri</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><img
+                            src="https://lh3.googleusercontent.com/khEpZ8ZbZqypwFC6DGX8m0imZDZAdaEBbjYXsJQMNf2KlYqycBIsz_yydp7yFc95hpbZo1IlKEhPYh2Md0gigFZRjLQBOocM=s300"
+                            alt="Basara"></div>
+                    <div class="preview-title">
+                        <h3>Basara</h3>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="background-image"><img
+                            src="https://lh3.googleusercontent.com/SbCqTRtmzB4AhONCa0FraqrNn1w1QObmUEPsvrfctQRjF3PdqDhpFpmBYKHfyE_bYvQVHXHurrd_inz4sQT_EtYfwQ_JOg=s300"
+                            alt="Basara"></div>
+                    <div class="preview-title">
+                        <h3>Bhadrachalam</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="location-left">
+            <div class="first">
+                <h2>HyderabadTourism.in</h2>
+                <h3>Owned &amp; Promoted by:<br>
+                    M/s. KONASEEMA TOURISM SERVICES<br>
+                    GST: 36AATFK2815N1ZQ</h3>
+            </div>
+            <div class="second">
+                <p>HYDERABAD OFFICE:<br>
+                    LIG 49, OPP. LODHA BELLEZZA, PHASE-VII,<br>
+                    KPHB COLONY, HYDERABAD-500 072, TELANGANA, INDIA
+                </p>
+            </div>
+            <div class="third">
+                <p>KONASEEMA OFFICE:<br>
+                    3-32, VRM ENCLAVE, NH-216 ROAD, DEVI CENTRE, BODASAKURRU, <br>
+                    AMALAPURAM, KONASEEMA, ANDHRA PRADESH, INDIA
+                </p>
+            </div>
+            <div class="mailto">
+                <a href="mailto:info@hyderabadtourism.in"><span>info@hyderabadtourism.in</span></a>
+            </div>
+        </div>
+        <div class="location-right">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.90509590553!2d78.24323147688081!3d17.41260864242927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1697976446887!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="websites-section">
+        <div class="info">
+            <p>HyderabadTourism.in is part of M/s. Konaseema Tourism Services, the leader in online travel and related
+                services.
+            <p>
+        </div>
+        <div class="websites">
+            <ul id="websites-list">
+                <li>KonsaeemaTourism.com</li>
+                <li>Papikondalu.com</li>
+                <li>DindiTourism.com</li>
+                <li>Maaredumilli.com</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pages">
+        <ul>
+            <li><a href="{% url 'about-us' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'achievements' %}">Achievements</a></li>
+            <li><a href="{% url 'terms-and-conditions' %}">Terms & Conditions</a></li>
+            <li><a href="{% url 'privacy-policy' %}">Privacy Policy</a></li>
+            <li><a href="{% url 'desclaimer' %}">Disclaimer</a></li>
+            <li><a href="{% url 'returns-and-refunds' %}">Returns and Refunds</a></li>
+        </ul>
+    </section>
+
+    <section id="associates-section">
+        <div>
+            <p>We are authorized associates of:</p>
+        </div>
+        <div id="associates">
+            <div><img
+                    src="https://lh3.googleusercontent.com/Gzbd_zgc7TqBAZFZDJ11otWDkfyrV1viOvqHdqDBrWRfAgA4oEMZXtWTRE0XyRfzT0zdMK9bNUtSeB1lBmbWraD0FPcxZgM=s320"
+                    alt="telangana tourism"></div>
+            <div><img
+                    src="https://lh3.googleusercontent.com/aUY-OeQ5Fy5nmVYwdkHi2egVez2zHJbt3gbuFmxncrsPZEiKMLLjfndfO9kr9bilbNzX9lk5cL2_n3wb7BY0p8QfgGWH3F0=s320"
+                    alt="ramoji film city"></div>
+            <div><img
+                    src="https://lh3.googleusercontent.com/_EdMRMrjf6UiLP-e0dvUZ65o_eGxrcRBJePOp1WzsMvTt_6Xy_-rMXWS1BBIJ_FQMEJQih7OI5FGET7vPAy5phV-EVdRuWg=s320"
+                    alt="andhra pradesh tourism"></div>
+            <div><img
+                    src="https://lh3.googleusercontent.com/qTgjZRPkMeqQUulPZNW0kknBTWSHa-0QxCDFQq-p_a1EuBx58-Hg26BMQvaghN8X7Fyo4ytlPatBQEWRvmPHIoXXNMcJJAoC=s320"
+                    alt="Hotels and resorts"></div>
+        </div>
+    </section>
+    {% include 'partials/_footer.html' %}
+
+</body>
+
+</html>

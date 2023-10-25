@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'partials/_fonts.html' %}
+    <title>Pay Online</title>
+
+    <style>
+        * {
+            font-family: Montserrat;
+        }
+
+        #main-section {
+            padding: 60px 100px;
+        }
+
+        #inner h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 130px;
+        }
+
+        .image img {
+            width: 200px;
+            height: 100px;
+        }
+
+        .options .left,
+        .right {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .caption {
+            font-size: 10px;
+            color: #535369;
+            text-align: center;
+        }
+
+        .details p {
+            text-align: center;
+            font-size: 14px;
+            color: black;
+            font-weight: 500;
+            line-height: 25px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'partials/_header.html' %}
+    <section id="main-section">
+        <div id="inner">
+            <div class="heading">
+                <h3>PAYMENT OPTIONS</h3>
+            </div>
+            <div class="options">
+                <div class="left">
+                    <div class="image"><img
+                            src="https://lh3.googleusercontent.com/w06W0zJ0IooufqtDDAS10MOMjf1BKC_Q0XS4Yj1kR-bkNvAdNI31idVRTK9uBwsSOlOU21iAXNa8gc2XQXAFU8leFkU2cQ=s320"
+                            alt="bank-transfer"></div>
+                    <div class="caption"><span>No additional charges</span></div>
+                    <div class="details">
+                        <p>Konaseema Tourism Services<br>
+                            Union Bank of India<br>
+                            A/c No.: 103411100002458<br>
+                            IFSC Code: UBIN0810347<br>
+                            JNTU-KPHB Colony Branch<br>
+                            HYDERABAD</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image"><img
+                            src="https://lh3.googleusercontent.com/4Z8lr6eG2iRkjIVxC4KN-O0dSc_Z4XGdwd1kGOtWbQgV84cgcjqJa4dr6Ap44tsDY3SMYNONLXamFdJxMymzfPTLwn3EC9M=s320"
+                            alt="PayU"></div>
+                    <div class="caption"><span>2% Charges applicable</span></div>
+                    <div class="details">
+                        <p>Click here to Pay through<br>Credit Card, Debit Card,<br>Net Banking etc.,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/_footer.html' %}
+</body>
+
+</html>
