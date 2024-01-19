@@ -22,12 +22,12 @@ TEMPLATES_DIRS=os.path.join(BASE_DIR,'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = "django-insecure-3fchra)#8b@4!)9z#s1hplm2qf+8_wa@s1ws8bj^^%aih^8r$b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DEBUG'))
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
 
 
 # Application definition
@@ -70,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'hyderabadtourism.wsgi.application'
+app = get_wsgi_application()
 
 
 # Database
